@@ -1097,3 +1097,13 @@ if ( ! function_exists('forget'))
 		}
 	}
 }
+
+if (!function_exists('dd')) {
+	function dd()
+	{
+		array_filter(func_get_args(), function($arg) {
+			print_r($arg);
+			echo PHP_EOL . PHP_EOL;
+		});
+	}
+}
